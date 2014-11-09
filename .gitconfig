@@ -1,0 +1,24 @@
+
+[user]
+        name = Surendra Bajracharya^M
+        email = sbajracharya@sourceallies.com^M
+[core]
+        excludesfile = /Users/suru/.gitignore_global
+[difftool "sourcetree"]^M
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path =
+[mergetool "sourcetree"]^M
+        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
+[alias]
+        co = checkout^M
+        ci = commit^M
+        stat = status^M
+        br = branch^M
+        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short^M
+        type = cat-file -t^M
+        dump = cat-file -p^M
+[filter "media"]
+        clean = git-media-clean %f
+        smudge = git-media-smudge %f
+
