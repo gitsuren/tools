@@ -19,6 +19,9 @@
         hist = log --graph --pretty=format:'%Cred%h%Creset | %ad - %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset' --abbrev-commit --graph --date=short
         type = cat-file -t
         dump = cat-file -p
+        unstage = reset HEAD
+        wdiff   = diff --color-words
+        stashdiff = stash show -p -w stash@{0}
 [filter "media"]
         clean = git-media-clean %f
         smudge = git-media-smudge %f
