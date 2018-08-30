@@ -1,0 +1,5 @@
+* In order to have auto complete feature enable for our properties
+  Add a dependency 
+    org.springframework.boot::spring-boot-configuration-processor::optional->true
+    
+    
