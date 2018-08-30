@@ -1,4 +1,4 @@
-* In order to have auto complete feature enable for our properties
+*** In order to have auto complete feature enable for our properties
   Add a dependency 
     org.springframework.boot::spring-boot-configuration-processor::optional->true
     
@@ -26,6 +26,31 @@
 
 
 
-*
+*** In order to validate the propeties and the pattern that shud match otherwise shud complain:
+    @ConfigurationProperties("github")
+    @Validated
+    public class GithubProperties {
+
+      /**
+       * Github private access token "user:token"
+       */
+      @Pattern(regexp = "\\w+:\\w+")
+      private String token;
+
+      public String getToken() {
+        return token;
+      }
+
+      public void setToken(String token) {
+        this.token = token;
+      }
+    }
+    
+    @Validated and @Pattern does the trick
+    
+    
+*** 
+
+
     
     
